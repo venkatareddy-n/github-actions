@@ -1,1 +1,13 @@
 name: testing
+
+on: push
+
+jobs: 
+    test-job:
+        runs-on: ubunt-latest
+        steps:
+            - name: Hello Disply
+              run: echo "welcome to Github Actions"
+            
+            - name: Display the date
+              run: date
