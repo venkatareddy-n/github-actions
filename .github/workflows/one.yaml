@@ -4,7 +4,7 @@ on: push
 
 jobs: 
     test-job:
-        runs-on: ubunt-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Hello Disply
               run: echo "welcome to Github Actions"
