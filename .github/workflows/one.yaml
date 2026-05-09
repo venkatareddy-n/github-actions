@@ -1,17 +1,21 @@
 name: testing
-on: 
-    push:
-    # workflow_dispatch: 
-jobs: 
-    test-job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Hello Disply
-              run: echo "welcome to Github Actions on push enabled test job"
 
-     deploy-job:
-        needs: test-job
-        runs-on: ubuntu-latest
-        steps:
-            - name: Hello Disply
-              run: echo "welcome to deployment job"
+on:
+  push:
+    branches:
+      - main
+  # workflow_dispatch:
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Display
+        run: echo "welcome to Github Actions on push enabled test job"
+
+  deploy-job:
+    needs: test-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Display
+        run: echo "welcome to deployment job"
